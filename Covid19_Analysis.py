@@ -6,8 +6,7 @@
       "name": "Covid19-Analysis.ipynb",
       "provenance": [],
       "collapsed_sections": [],
-      "authorship_tag": "ABX9TyPkHZjtIOxNMEmRO3Xq0zEv",
-      "include_colab_link": true
+      "authorship_tag": "ABX9TyPkHZjtIOxNMEmRO3Xq0zEv"
     },
     "kernelspec": {
       "name": "python3",
