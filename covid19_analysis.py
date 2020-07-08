@@ -6,11 +6,11 @@ import seaborn as sns
 @st.cache
 def covid():
     covid = pd.read_csv("time_series_covid19_confirmed_global.csv")
-    covid.set_index("Country/Region", inplace=True)
-    covid.drop(['Province/State', 'Lat', 'Long'], axis=1, inplace=True)
-    covid['Average cases'] = covid.mean(axis=1)
-    covid.loc['Average cases'] = covid.mean()
-    covid_data = pd.DataFrame(covid['Average cases'])
+    covid_agg = covid.groupby("Country/Region").mean()
+    covid_agg.drop(['Lat', 'Long'], axis=1, inplace=True)
+    covid_agg['Average cases'] = covid_agg.mean(axis=1)
+    covid_agg.loc['Average cases'] = covid_agg.mean()
+    covid_data = pd.DataFrame(covid_agg['Average cases'])
     return covid_data
 
 
