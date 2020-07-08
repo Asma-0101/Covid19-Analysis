@@ -39,8 +39,8 @@ data1 = data0.join(temp(), how='inner')
 def main():
     page = st.sidebar.selectbox("Choose a page", ['Analysis', 'About'])
     if page == "Analysis":
-        st.title("""Covid-19 Analysis
-                     Based on global climate and population. The application is being upgraded. The new version would be launched soon""")
+        st.title("""Covid-19 Analysis""")
+        st.write('Based on global climate and population. The application is currently being upgraded. The new version would be launched soon')
         parameter = st.selectbox(
         "Choose a parameter", list(data1.columns.values[1:]))
 
@@ -56,7 +56,7 @@ def main():
     elif page == 'About':
         st.title("About")
         st.subheader('Author')
-        st.write('This project is created by Asma Khan, majoring in Information Technology.')
+        st.write('Hi, I am Asma Khan, majoring in Information Technology from Mumbai-India. Connect with me on LinkedIn: https://www.linkedin.com/in/asma-khan-0676a116a/.')
         st.subheader('About the application')
         st.write('This application is developed to make a comparative study between basic characteristics of various countries and the average cases in those countries. The sources of the datasets have been mentioned below.')
         st.subheader('Datasets')
