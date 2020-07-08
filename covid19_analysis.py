@@ -40,7 +40,7 @@ def main():
     page = st.sidebar.selectbox("Choose a page", ['Analysis', 'About'])
     if page == "Analysis":
         st.title("""Covid-19 Analysis
-                     Based on global climate and population""")
+                     Based on global climate and population. The application is being upgraded. The new version would be launched soon""")
         parameter = st.selectbox(
         "Choose a parameter", list(data1.columns.values[1:]))
 
@@ -56,7 +56,9 @@ def main():
     elif page == 'About':
         st.title("About")
         st.subheader('Author')
-        st.write('This project was created by Asma Khan.')
+        st.write('This project is created by Asma Khan, majoring in Information Technology.')
+        st.subheader('About the application')
+        st.write('This application is developed to make a comparative study between basic characteristics of various countries and the average cases in those countries. The sources of the datasets have been mentioned below.')
         st.subheader('Datasets')
         st.write("Following provides the sources of datasets used in this project:")
         st.write("[Covid-19 dataset](https://data.humdata.org/dataset/novel-coronavirus-2019-ncov-cases)")
@@ -64,7 +66,9 @@ def main():
         st.write("[Temperature dataset](https://datacatalog.worldbank.org/dataset/climate-change-knowledge-portal-historical-data)")
         st.subheader('Source code')
         st.write('https://github.com/Asma-0101/Covid19-Analysis')
+        st.subheader('Disclaimer')
+        st.write('Evidently this project is solely for the purpose of studying basic usage of Python with Streamlit and it contains no profound meaning to it.')
 
-
+        
 if __name__ == '__main__':
     main()
