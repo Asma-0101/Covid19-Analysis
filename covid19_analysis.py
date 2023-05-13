@@ -37,6 +37,8 @@ data1 = data0.join(temp(), how='inner')
 
 
 def main():
+    
+    st.set_option('deprecation.showPyplotGlobalUse', False)
     page = st.sidebar.selectbox("Choose a page", ['Analysis', 'About'])
     if page == "Analysis":
         st.title("""Covid-19 Analysis""")
